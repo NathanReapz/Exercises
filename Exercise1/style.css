@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+    user-select: none;
+    box-sizing: border-box;
+    
+}
+.sidebar{
+    position: fixed;
+    width:250px;
+    height:100%;
+    left:0;
+    background-color: rgb(71, 67, 67);
+
+}
+.sidebar .text{
+    color:white;
+    font-size:25px;
+    font-weight:600;
+    line-height: 65px;
+    text-align: center;
+    background: #353434;
+ 
+}
+nav ul{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+nav ul li{
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.1) ;
+}
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color:white;
+    font-size: 17px;
+    padding-left: 40px;
+    font-weight:500;
+    display:block;
+    width:100%;
+}
+nav ul li a:hover{
+    color:violet;
+    background: rgb(105, 97, 97);
+}
+nav ul li.show ul{
+    position:static;
+    display:none;
+}
+nav ul ul{
+    display: block;
+}
+nav ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+nav ul ul li a{
+  font-size:17px;
+  color:rgb(221, 163, 163);
+  padding-left: 80px;
+}
+nav ul li a span{
+    position: absolute;
+    top: 45%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.8s;
+}
+nav ul li a:hover span.rotate{
+    transform: translateY(-50%) rotate(-180deg);
+}

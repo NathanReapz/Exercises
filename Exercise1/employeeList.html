@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Liststyle.css">
+</head>
+<body onload="showData()">
+    <header>
+        <input type="text" id = "search"  placeholder="Type Here">
+        <button onclick="search()">Search</button>
+        <button onclick="clearsearch()">Clear</button>
+        <button id="addBtn">Add</button>
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+              
+              <form id="myForm" onsubmit="addData(); return false;" action="">
+                  Employee id: <input type="text" name="eid" id="eid">
+                  Employee Name: <input type="text" name="ename" id="ename">
+                  Age: <input type="number" name="age" id="age">
+                  <button class="submit">submit</button>
+              </form>
+            </div>
+          
+          </div>
+    </header>
+    <div class="container">
+        
+        <table id ="etable">
+           <thead id = "tablehead">  
+               <th class ="sort" onclick="sortTable(0)">Employee Id</th>
+               <th class="sort" onclick="sortTable(1)">Employee Name</th>
+               <th>Employee Age</th>
+               <th>Action</th>
+           </thead>
+           <tbody id = "data">
+
+           </tbody>
+        </table>
+    </div>
+    <div class="pagination-block">
+        <span class="pageButton outline-none" id="button_prev">Prev</span>
+        <span id="page_number" class="outline-none"></span>
+        <span class="pageButton outline-none" id="button_next">Next</span>
+      </div>
+    <script src="script2.js"></script>
+</body>
+</html>
